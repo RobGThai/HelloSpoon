@@ -9,13 +9,13 @@ public class EchoerTest {
     Echoer echoer;
 
     @Test
-    public void should_echo_helloworld() {
+    public void test_should_echo_helloworld() {
         echoer = new Echoer("Hello World");
         Assert.assertEquals("Hello World", echoer.echo());
     }
 
     @Test
-    public void should_echo_Hi() {
+    public void test_should_echo_Hi() {
         echoer = new Echoer("Hi");
         Assert.assertEquals("Hi", echoer.echo());
     }
