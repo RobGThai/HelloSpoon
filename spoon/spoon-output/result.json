@@ -1,0 +1,119 @@
+{
+  "title": "Spoon Execution",
+  "started": 1422566341594,
+  "duration": 0,
+  "results": {
+    "192_168_56_101_5555": {
+      "installFailed": false,
+      "testResults": {},
+      "started": 1422566342568,
+      "duration": -1,
+      "exceptions": [
+        {
+          "className": "java.io.FileNotFoundException",
+          "message": "spoon-output/work/192_168_56_101_5555/result.json (No such file or directory)",
+          "elements": [
+            {
+              "className": "java.io.FileInputStream",
+              "fileName": "FileInputStream.java",
+              "line": -2,
+              "methodName": "open",
+              "isNative": true
+            },
+            {
+              "className": "java.io.FileInputStream",
+              "fileName": "FileInputStream.java",
+              "line": 138,
+              "methodName": "\u003cinit\u003e",
+              "isNative": false
+            },
+            {
+              "className": "java.io.FileReader",
+              "fileName": "FileReader.java",
+              "line": 72,
+              "methodName": "\u003cinit\u003e",
+              "isNative": false
+            },
+            {
+              "className": "com.squareup.spoon.SpoonDeviceRunner",
+              "fileName": "SpoonDeviceRunner.java",
+              "line": 124,
+              "methodName": "runInNewProcess",
+              "isNative": false
+            },
+            {
+              "className": "com.squareup.spoon.SpoonRunner$1",
+              "fileName": "SpoonRunner.java",
+              "line": 148,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "java.lang.Thread",
+              "fileName": "Thread.java",
+              "line": 745,
+              "methodName": "run",
+              "isNative": false
+            }
+          ]
+        }
+      ]
+    },
+    "192_168_56_102_5555": {
+      "installFailed": false,
+      "testResults": {},
+      "started": 1422566342568,
+      "duration": -1,
+      "exceptions": [
+        {
+          "className": "java.io.FileNotFoundException",
+          "message": "spoon-output/work/192_168_56_102_5555/result.json (No such file or directory)",
+          "elements": [
+            {
+              "className": "java.io.FileInputStream",
+              "fileName": "FileInputStream.java",
+              "line": -2,
+              "methodName": "open",
+              "isNative": true
+            },
+            {
+              "className": "java.io.FileInputStream",
+              "fileName": "FileInputStream.java",
+              "line": 138,
+              "methodName": "\u003cinit\u003e",
+              "isNative": false
+            },
+            {
+              "className": "java.io.FileReader",
+              "fileName": "FileReader.java",
+              "line": 72,
+              "methodName": "\u003cinit\u003e",
+              "isNative": false
+            },
+            {
+              "className": "com.squareup.spoon.SpoonDeviceRunner",
+              "fileName": "SpoonDeviceRunner.java",
+              "line": 124,
+              "methodName": "runInNewProcess",
+              "isNative": false
+            },
+            {
+              "className": "com.squareup.spoon.SpoonRunner$1",
+              "fileName": "SpoonRunner.java",
+              "line": 148,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "java.lang.Thread",
+              "fileName": "Thread.java",
+              "line": 745,
+              "methodName": "run",
+              "isNative": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
