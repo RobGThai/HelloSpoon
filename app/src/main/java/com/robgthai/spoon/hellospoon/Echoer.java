@@ -10,6 +10,6 @@ public class Echoer {
 
 
     public String echo() {
-        return null;
+        return message;
     }
 }
