@@ -17,20 +17,34 @@ function abspath() {
   fi
 }
 
+function shallWeBail() {
+  if [ "$?" == 1 ]; then
+    echo "I'M OUTTA HERE!!!"
+    exit 1
+  fi
+}
+
 #Start
 echo 'Loading properties file'
-abs_path=$(abspath .)
 current_dir=$(dirname "$BASH_SOURCE")
+abs_path=$(abspath $current_dir)
 user_dir=$(pwd)
-echo "Current dir: $current_dir"
-echo "From dir: $user_dir"
+#echo "Current dir: $current_dir"
+#echo "From dir: $user_dir"
 cd $current_dir
 . setting.properties
 if [ "$android_sdk" ]; then
   echo "SDK: $android_sdk"
   /bin/bash copy_apk.sh
+  shallWeBail
   /bin/bash run.sh debug.apk test.apk $android_sdk
-  echo "See spoon report at $abs_path/spoon-output/index.html"
+  shallWeBail
+  if [ "$open_browser" == "yes" ]; then
+    echo "Opening report $abs_path/spoon-output/index.html"
+    open $abs_path/spoon-output/index.html
+  else
+    echo "Report available at $abs_path/spoon-output/index.html"
+  fi
 else
   echo 'Please set android_sdk in setting.properties'
 fi

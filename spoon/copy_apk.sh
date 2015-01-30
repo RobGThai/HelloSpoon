@@ -1,8 +1,24 @@
 echo 'Remove apks'
 rm debug.apk
 rm test.apk
-echo 'Copy apks to current path'
-path_to_apk=../app/build/outputs/apk
-cp $path_to_apk/app-debug.apk debug.apk
-cp $path_to_apk/app-debug-test-unaligned.apk test.apk
-ls -l *.apk
+. setting.properties
+
+if [ "$path_to_apk" ] && [ "$application_apk" ] && [ "$test_apk" ]; then
+  echo 'Copy apks to current path'
+
+  cp $path_to_apk/$application_apk debug.apk
+  if [ "$?" -ne "0" ]; then
+    echo "Could not copy application apk at: $path_to_apk/$application_apk"
+    exit 1
+  fi
+
+  cp $path_to_apk/$test_apk test.apk
+  if [ "$?" -ne "0" ]; then
+    echo "Could not copy test apk at: $path_to_apk/$test_apk"
+    exit 1
+  fi
+
+  ls -l *.apk
+else
+  echo 'Please set paths in setting.properties'
+fi
