@@ -51,12 +51,17 @@ public class LandingActivityTest extends ActivityInstrumentationTestCase2<Landin
         onView(withId(R.id.txtHello)).check(matches(withText(R.string.hello_world)));
     }
 
+    public void test_txtHelloSaysHelloWithString() {
+        Spoon.screenshot(mActivity, "Hello_World_isHello");
+        onView(withId(R.id.txtHello)).check(matches(withText("Hello world!")));
+    }
+
     public void test_click_txtHello_shouldOpen_EchoActivity() {
         Spoon.screenshot(mActivity, "Hello_World_before_click");
         onView(withId(R.id.txtHello)).perform(click());
+        View v = mActivity.findViewById(R.id.txtHello);
         Spoon.screenshot(mActivity, "Hello_World_after_click");
-        onView(withId(R.id.txtHello)).check(matches(not(isDisplayed())));
+        Assert.assertNull("txtHello should no longer exists", v);
     }
-
 
 }

@@ -1,16 +1,15 @@
 package com.robgthai.spoon.hellospoon;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
+
+import com.robgthai.spoon.hellospoon.echo.EchoActivity;
 
 
-public class LandingActivity extends ActionBarActivity {
+public class LandingActivity extends ActionBarActivity implements LandingFragment.ClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +17,10 @@ public class LandingActivity extends ActionBarActivity {
         setContentView(R.layout.activity_landing);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+                    .add(R.id.container, LandingFragment.newInstance())
                     .commit();
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -46,19 +44,13 @@ public class LandingActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
+    @Override
+    public void onHelloClickListener() {
+        sendEcho("Hello");
+    }
 
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_landing, container, false);
-            return rootView;
-        }
+    private void sendEcho(String message) {
+        Intent intent = new Intent(LandingActivity.this, EchoActivity.class);
+        startActivity(intent);
     }
 }

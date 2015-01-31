@@ -1,5 +1,7 @@
 package com.robgthai.spoon.hellospoon;
 
+import com.robgthai.spoon.hellospoon.echo.Echoer;
+
 import junit.framework.Assert;
 
 import org.junit.Test;
