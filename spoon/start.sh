@@ -24,6 +24,15 @@ function shallWeBail() {
   fi
 }
 
+function openReportInBrowser() {
+if [ "$1" == "yes" ]; then
+  echo "Opening report $abs_path/spoon-output/index.html"
+  open $abs_path/spoon-output/index.html
+else
+  echo "Report available at $abs_path/spoon-output/index.html"
+fi
+}
+
 #Start
 echo 'Loading properties file'
 current_dir=$(dirname "$BASH_SOURCE")
@@ -39,12 +48,7 @@ if [ "$android_sdk" ]; then
   shallWeBail
   /bin/bash run.sh debug.apk test.apk $android_sdk
   shallWeBail
-  if [ "$open_browser" == "yes" ]; then
-    echo "Opening report $abs_path/spoon-output/index.html"
-    open $abs_path/spoon-output/index.html
-  else
-    echo "Report available at $abs_path/spoon-output/index.html"
-  fi
+  openReportInBrowser $open_browser
 else
   echo 'Please set android_sdk in setting.properties'
 fi
