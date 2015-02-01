@@ -1,6 +1,4 @@
-package com.robgthai.spoon.hellospoon;
-
-import com.robgthai.spoon.hellospoon.echo.Echoer;
+package com.robgthai.spoon.hellospoon.echo;
 
 import junit.framework.Assert;
 
