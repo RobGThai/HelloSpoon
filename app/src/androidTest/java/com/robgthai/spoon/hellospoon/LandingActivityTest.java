@@ -2,7 +2,6 @@ package com.robgthai.spoon.hellospoon;
 
 import android.app.Activity;
 import android.app.Instrumentation;
-import android.support.test.espresso.NoMatchingViewException;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.ViewAsserts;
 import android.view.View;
@@ -19,7 +18,6 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.Matchers.not;
 
 public class LandingActivityTest extends ActivityInstrumentationTestCase2<LandingActivity>{
 
