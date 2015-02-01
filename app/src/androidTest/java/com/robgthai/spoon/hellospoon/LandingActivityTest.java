@@ -39,6 +39,22 @@ public class LandingActivityTest extends ActivityInstrumentationTestCase2<Landin
         mActivity = getActivity();
     }
 
+    public void test_txtHelloVisible() {
+        Spoon.screenshot(mActivity, "Hello_World");
+        View txtHello = mActivity.findViewById(R.id.txtHello);
+        ViewAsserts.assertOnScreen(mActivity.getWindow().getDecorView(), txtHello);
+    }
+
+    public void test_txtHelloVisibleWithEspresso() {
+        Spoon.screenshot(mActivity, "Hello_World_espresso");
+        onView(withId(R.id.txtHello)).check(matches(isDisplayed()));
+    }
+
+    public void test_txtHelloSaysHello() {
+        Spoon.screenshot(mActivity, "Hello_World_isHello");
+        onView(withId(R.id.txtHello)).check(matches(withText(R.string.hello_world)));
+    }
+
     public void test_click_txtHello_shouldRemove_LandingFragment() {
         Spoon.screenshot(mActivity, "Hello_World_before_click");
         onView(withId(R.id.txtHello)).perform(click());

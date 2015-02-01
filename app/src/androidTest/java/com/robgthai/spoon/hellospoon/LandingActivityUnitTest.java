@@ -3,6 +3,8 @@ package com.robgthai.spoon.hellospoon;
 import android.content.Context;
 import android.content.Intent;
 import android.support.test.InstrumentationRegistry;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.test.ActivityUnitTestCase;
 import android.test.UiThreadTest;
 import android.test.ViewAsserts;
@@ -23,6 +25,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 public class LandingActivityUnitTest extends ActivityUnitTestCase<LandingActivity> {
 
     private LandingActivity mActivity;
+    private FragmentManager mFragmentManager;
 
     private MockApplication mockApplication = new MockApplication() {
         @Override
@@ -55,18 +58,39 @@ public class LandingActivityUnitTest extends ActivityUnitTestCase<LandingActivit
         mActivity = startActivity(intent, null, null);
     }
 
+    private void startFragment(Fragment fragment, String tag) {
+        mFragmentManager = mActivity.getSupportFragmentManager();
+        mFragmentManager.beginTransaction().add(fragment, tag).commit();
+        mFragmentManager.executePendingTransactions();
+    }
+
     @UiThreadTest
     public void test_Preconditions() {
         startActivity();
         assertNotNull("Activity is null", getActivity());
     }
 
+    @UiThreadTest
+    public void test_fragment_exists() {
+        startActivity();
+        startFragment(LandingFragment.newInstance(), "fragment");
+
+        LandingFragment lf = (LandingFragment) mFragmentManager.findFragmentByTag("fragment");
+        Spoon.screenshot(mActivity, "LandingFragment");
+
+        assertNotNull("Fragment is null", lf);
+//        assertNotNull("Fragment View is null", lf.getView());
+    }
+
 //    @UiThreadTest
 //    public void test_txtHello_exists() {
 //        startActivity();
+//        startFragment(LandingFragment.newInstance(), "fragment");
 //
+//        LandingFragment lf = (LandingFragment) mFragmentManager.findFragmentByTag("fragment");
 //        Spoon.screenshot(mActivity, "Hello_World");
-//        View txtHello = mActivity.findViewById(R.id.txtHello);
+//
+//        View txtHello = lf.getView().findViewById(R.id.txtHello);
 //        assertNotNull("txtHello is null", txtHello);
 //        assertEquals("txtHello is not TextView", TextView.class.getName(), txtHello.getClass().getName());
 ////        ViewAsserts.assertOnScreen(mActivity.getWindow().getDecorView(), txtHello);
