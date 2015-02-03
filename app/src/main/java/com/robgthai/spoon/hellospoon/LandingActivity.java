@@ -51,6 +51,9 @@ public class LandingActivity extends ActionBarActivity implements LandingFragmen
 
     private void sendEcho(String message) {
         Intent intent = new Intent(LandingActivity.this, EchoActivity.class);
+        Bundle b = new Bundle();
+        b.putString(EchoActivity.MESSAGE, message);
+        intent.putExtras(b);
         startActivity(intent);
     }
 }

@@ -24,6 +24,7 @@ public class LandingActivityTest extends ActivityInstrumentationTestCase2<Landin
     private static final int MAXIMUM_TIMEOUT = 5000; // Because 5 seconds is ANR limit
 
     private Activity mActivity;
+    private Instrumentation.ActivityMonitor am;
 
     public LandingActivityTest(Class<LandingActivity> activityClass) {
         super(activityClass);
@@ -37,6 +38,15 @@ public class LandingActivityTest extends ActivityInstrumentationTestCase2<Landin
     protected void setUp() throws Exception {
         super.setUp();
         mActivity = getActivity();
+    }
+
+    @Override
+    protected void tearDown() throws Exception {
+        super.tearDown();
+        if(am != null) {
+            getInstrumentation().removeMonitor(am);
+            am = null;
+        }
     }
 
     public void test_txtHelloVisible() {
@@ -72,10 +82,27 @@ public class LandingActivityTest extends ActivityInstrumentationTestCase2<Landin
         Activity echoActivity = am.waitForActivityWithTimeout(MAXIMUM_TIMEOUT);
         Assert.assertNotNull("No new activity launched", echoActivity);
         Spoon.screenshot(echoActivity, "EchoActivity");
-        Assert.assertEquals("EchoActivity is not called", 1, am.getHits());
         Assert.assertEquals("New Activity is not EchoActivity", EchoActivity.class, echoActivity.getClass());
+        Assert.assertEquals("EchoActivity is not called", 1, am.getHits());
 
         getInstrumentation().removeMonitor(am);
+    }
+
+    public void test_click_txtHello_shouldSendIntentToEchoActivityWithBundle() {
+        Instrumentation.ActivityMonitor am =
+                getInstrumentation().addMonitor(EchoActivity.class.getName(), null, false);
+
+        Spoon.screenshot(mActivity, "Hello_World_before_click");
+        onView(withId(R.id.txtHello)).perform(click());
+
+        Activity echoActivity = am.waitForActivityWithTimeout(MAXIMUM_TIMEOUT);
+
+        Assert.assertNotNull("Intent is not available, weird.", echoActivity.getIntent());
+        Assert.assertNotNull("That intent has no bundle, well it should :(", echoActivity.getIntent().getExtras());
+
+        Assert.assertNotNull("Bundle does not contain 'message'", echoActivity.getIntent().getExtras().getString(EchoActivity.MESSAGE));
+        Spoon.screenshot(echoActivity, "EchoActivity");
+
     }
 
 }
