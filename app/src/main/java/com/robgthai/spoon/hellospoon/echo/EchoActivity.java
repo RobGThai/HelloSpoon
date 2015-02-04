@@ -8,7 +8,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.robgthai.spoon.hellospoon.R;
 
@@ -24,9 +26,23 @@ public class EchoActivity extends ActionBarActivity {
 
         Bundle b = getIntent().getExtras();
 
+        String message = b.getString(MESSAGE);
         TextView t = (TextView) findViewById(R.id.txtEcho);
-//        t.setText(b.getString(MESSAGE));
-        t.setText("OMG");
+        t.setText(message);
+
+        ImageView img = (ImageView) findViewById(R.id.imgPhoto);
+
+        if("OMG".equals(message)) {
+            img.setImageResource(R.drawable.ic_launcher);
+            img.setContentDescription("OMG");
+        }
+
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(EchoActivity.this, "Hello", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 

@@ -46,7 +46,7 @@ public class LandingActivity extends ActionBarActivity implements LandingFragmen
 
     @Override
     public void onHelloClickListener() {
-        sendEcho("Hello");
+        sendEcho("OMG");
     }
 
     private void sendEcho(String message) {

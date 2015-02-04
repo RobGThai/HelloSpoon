@@ -13,4 +13,11 @@
         android:layout_height="wrap_content"
         android:text="Echo!" />
 
+    <ImageView
+        android:id="@+id/imgPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fac"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
