@@ -7,7 +7,6 @@ import com.squareup.burst.annotation.Burst;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
 
 @RunWith(BurstJUnit4.class)
