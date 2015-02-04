@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.AndroidTestRunner;
 
-import com.robgthai.spoon.hellospoon.common.BurstInstrumentationTestRunner;
-import com.squareup.burst.BurstAndroid;
 import com.squareup.spoon.Spoon;
 
 import org.junit.runner.RunWith;
