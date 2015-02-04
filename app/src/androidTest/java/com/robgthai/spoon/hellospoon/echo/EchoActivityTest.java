@@ -2,11 +2,9 @@ package com.robgthai.spoon.hellospoon.echo;
 
 import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
-import android.test.AndroidTestRunner;
 
+import com.squareup.burst.annotation.Burst;
 import com.squareup.spoon.Spoon;
-
-import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
@@ -14,22 +12,23 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 public class EchoActivityTest extends ActivityInstrumentationTestCase2<EchoActivity> {
-    private final EchoCollection echos;
+    @Burst
+    public EchoCollection echos;
 
     private EchoActivity mActivity;
 
     public EchoActivityTest() {
-        this(EchoActivity.class, null);
+        super(EchoActivity.class);
     }
 
 //    public EchoActivityTest(Class<EchoActivity> activityClass) {
 //        this(activityClass, null);
 //    }
 
-    public EchoActivityTest(Class<EchoActivity> activityClass, EchoCollection echos) {
-        super(activityClass);
-        this.echos = echos;
-    }
+//    public EchoActivityTest(Class<EchoActivity> activityClass, EchoCollection echos) {
+//        super(activityClass);
+//        this.echos = echos;
+//    }
 
     @Override
     protected void setUp() throws Exception {
