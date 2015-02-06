@@ -31,11 +31,13 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
+    compile group: 'com.google.guava', name: 'guava', version: '15.0'
 
     androidTestCompile 'junit:junit:4.11'
     androidTestCompile 'com.squareup.spoon:spoon-client:1.1.2'
     androidTestCompile ('com.android.support.test.espresso:espresso-core:2.0')
     androidTestCompile ('com.android.support.test:testing-support-lib:0.1')
+    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.0'
     androidTestCompile ('com.squareup.burst:burst-junit4:1.0.2')
 }
 
