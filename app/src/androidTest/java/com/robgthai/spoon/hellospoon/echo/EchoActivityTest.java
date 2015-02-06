@@ -26,8 +26,8 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
 public class EchoActivityTest extends ActivityInstrumentationTestCase2<EchoActivity> {
-    @Burst
-    public EchoCollection echos;
+//    @Burst
+//    public EchoCollection echos;
 
     private EchoActivity mActivity;
 
@@ -97,6 +97,7 @@ public class EchoActivityTest extends ActivityInstrumentationTestCase2<EchoActiv
                 .inRoot(withDecorView(is(not(getActivity().getWindow().getDecorView()))))
                 .check(matches(isDisplayed()));
         Spoon.screenshot(mActivity, "Image_clicked");
+
     }
 
 //    public void testEchoBurst() {

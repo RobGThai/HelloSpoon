@@ -43,6 +43,9 @@ public class EchoActivity extends ActionBarActivity {
                 Toast.makeText(EchoActivity.this, "Hello", Toast.LENGTH_SHORT).show();
             }
         });
+
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 

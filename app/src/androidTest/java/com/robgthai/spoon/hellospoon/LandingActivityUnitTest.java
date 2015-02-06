@@ -46,41 +46,41 @@ public class LandingActivityUnitTest extends ActivityUnitTestCase<LandingActivit
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        injectInstrumentation(InstrumentationRegistry.getInstrumentation());
+//        injectInstrumentation(InstrumentationRegistry.getInstrumentation());
     }
 
-    private void startActivity() {
-//        setApplication(mockApplication);
-        Context context = new ContextThemeWrapper(getInstrumentation().getTargetContext()
-                , R.style.AppTheme);
-        setActivityContext(context);
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        mActivity = startActivity(intent, null, null);
-    }
-
-    private void startFragment(Fragment fragment, String tag) {
-        mFragmentManager = mActivity.getSupportFragmentManager();
-        mFragmentManager.beginTransaction().add(fragment, tag).commit();
-        mFragmentManager.executePendingTransactions();
-    }
-
-    @UiThreadTest
-    public void test_Preconditions() {
-        startActivity();
-        assertNotNull("Activity is null", getActivity());
-    }
-
-    @UiThreadTest
-    public void test_fragment_exists() {
-        startActivity();
-        startFragment(LandingFragment.newInstance(), "fragment");
-
-        LandingFragment lf = (LandingFragment) mFragmentManager.findFragmentByTag("fragment");
-        Spoon.screenshot(mActivity, "LandingFragment");
-
-        assertNotNull("Fragment is null", lf);
-//        assertNotNull("Fragment View is null", lf.getView());
-    }
+//    private void startActivity() {
+////        setApplication(mockApplication);
+//        Context context = new ContextThemeWrapper(getInstrumentation().getTargetContext()
+//                , R.style.AppTheme);
+//        setActivityContext(context);
+//        Intent intent = new Intent(Intent.ACTION_MAIN);
+//        mActivity = startActivity(intent, null, null);
+//    }
+//
+//    private void startFragment(Fragment fragment, String tag) {
+//        mFragmentManager = mActivity.getSupportFragmentManager();
+//        mFragmentManager.beginTransaction().add(fragment, tag).commit();
+//        mFragmentManager.executePendingTransactions();
+//    }
+//
+//    @UiThreadTest
+//    public void test_Preconditions() {
+//        startActivity();
+//        assertNotNull("Activity is null", getActivity());
+//    }
+//
+//    @UiThreadTest
+//    public void test_fragment_exists() {
+//        startActivity();
+//        startFragment(LandingFragment.newInstance(), "fragment");
+//
+//        LandingFragment lf = (LandingFragment) mFragmentManager.findFragmentByTag("fragment");
+//        Spoon.screenshot(mActivity, "LandingFragment");
+//
+//        assertNotNull("Fragment is null", lf);
+////        assertNotNull("Fragment View is null", lf.getView());
+//    }
 
 //    @UiThreadTest
 //    public void test_txtHello_exists() {

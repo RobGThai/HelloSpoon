@@ -7,6 +7,7 @@ import android.test.ViewAsserts;
 import android.view.View;
 
 import com.robgthai.spoon.hellospoon.echo.EchoActivity;
+import com.robgthai.spoon.hellospoon.LandingActivity;
 import com.squareup.spoon.Spoon;
 
 import junit.framework.Assert;
