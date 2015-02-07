@@ -26,6 +26,10 @@ android {
     packagingOptions {
         exclude 'LICENSE.txt'
     }
+
+//    testOptions {
+//        unitTests.returnDefaultValues = true
+//    }
 }
 
 dependencies {
@@ -37,8 +41,15 @@ dependencies {
     androidTestCompile 'com.squareup.spoon:spoon-client:1.1.2'
     androidTestCompile ('com.android.support.test.espresso:espresso-core:2.0')
     androidTestCompile ('com.android.support.test:testing-support-lib:0.1')
-    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.0'
+    androidTestCompile ('com.android.support.test.espresso:espresso-contrib:2.0') {
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude module: 'recyclerview-v7'
+    }
     androidTestCompile ('com.squareup.burst:burst-junit4:1.0.2')
+
+//    testCompile 'junit:junit:4.12'
+//    testCompile ('com.android.support.test.espresso:espresso-core:2.0')
 }
 
 /**
