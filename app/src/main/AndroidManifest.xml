@@ -21,58 +21,58 @@
         <activity
             android:name=".echo.EchoActivity"
             android:label="@string/title_activity_echo"></activity>
-        <activity android:name="com.google.android.apps.common.testing.ui.testapp.MainActivity" android:label="UI Test App">
+        <activity android:name=".google.MainActivity" android:label="UI Test App">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.google.android.apps.common.testing.ui.testapp.ActionBarTestActivity"
+            android:name=".google.ActionBarTestActivity"
             android:label="actionbar test activity"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity
-            android:name="com.google.android.apps.common.testing.ui.testapp.SimpleActivity"
+            android:name=".google.SimpleActivity"
             android:label="simple activity" />
         <activity
-            android:name="com.google.android.apps.common.testing.ui.testapp.SendActivity"
+            android:name=".google.SendActivity"
             android:label="send activity" />
         <activity
-            android:name="com.google.android.apps.common.testing.ui.testapp.DisplayActivity"
+            android:name=".google.DisplayActivity"
             android:label="display activity" />
         <activity
-            android:name="com.google.android.apps.common.testing.ui.testapp.DrawerActivity"
+            android:name=".google.DrawerActivity"
             android:label="drawer activity"
             android:theme="@style/Theme.AppCompat.Light" />
         <activity
-            android:name="com.google.android.apps.common.testing.ui.testapp.GestureActivity"
+            android:name=".google.GestureActivity"
             android:exported="true"
             android:label="gesture activity" />
         <activity
-            android:name="com.google.android.apps.common.testing.ui.testapp.ScrollActivity"
+            android:name=".google.ScrollActivity"
             android:exported="true"
             android:label="scroll activity" />
         <activity
-            android:name="com.google.android.apps.common.testing.ui.testapp.LongListActivity"
+            android:name=".google.LongListActivity"
             android:exported="true"
             android:label="list activity" />
         <activity
-            android:name="com.google.android.apps.common.testing.ui.testapp.MenuActivity"
+            android:name=".google.MenuActivity"
             android:label="menu activity" />
         <activity
-            android:name="com.google.android.apps.common.testing.ui.testapp.FragmentStack"
+            android:name=".google.FragmentStack"
             android:label="fragment stack activity" />
         <activity
-            android:name="com.google.android.apps.common.testing.ui.testapp.SyncActivity"
+            android:name=".google.SyncActivity"
             android:label="sync activity" />
         <activity
-            android:name="com.google.android.apps.common.testing.ui.testapp.SimpleWebViewActivity"
+            android:name=".google.SimpleWebViewActivity"
             android:label="web view" />
         <activity
-            android:name="com.google.android.apps.common.testing.ui.testapp.SwipeActivity"
+            android:name=".google.SwipeActivity"
             android:label="swipe activity" />
         <activity
-            android:name="com.google.android.apps.common.testing.ui.testapp.ViewPagerActivity"
+            android:name=".google.ViewPagerActivity"
             android:label="view pager activity" />
     </application>
 
