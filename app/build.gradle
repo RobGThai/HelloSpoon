@@ -1,4 +1,17 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.stanfy.spoon:spoon-gradle-plugin:0.14.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
 apply plugin: 'com.android.application'
+apply plugin: 'spoon'
 
 android {
     compileSdkVersion 21
@@ -68,5 +81,20 @@ configurations.all {
         force 'org.hamcrest:hamcrest-core:1.1'
         force 'org.hamcrest:hamcrest-integration:1.1'
         force 'org.hamcrest:hamcrest-library:1.1'
+    }
+}
+
+spoon {
+    // for debug output
+    debug = true
+
+    baseOutputDir = file("$buildDir/outputs/reports/spoon/")
+
+    if (project.hasProperty('spoonClassName')) {
+        className = project.spoonClassName
+
+        if (project.hasProperty('spoonMethodName')) {
+            methodName = project.spoonMethodName
+        }
     }
 }
