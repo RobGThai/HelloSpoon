@@ -2,7 +2,9 @@ package com.robgthai.spoon.hellospoon.burst;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.test.ViewAsserts;
 import android.test.suitebuilder.annotation.SmallTest;
+import android.view.View;
 import android.widget.TextView;
 
 import com.robgthai.spoon.hellospoon.LandingActivity;
@@ -12,6 +14,7 @@ import com.robgthai.spoon.hellospoon.echo.EchoActivity;
 import com.robgthai.spoon.hellospoon.echo.EchoCollection;
 import com.squareup.burst.BurstJUnit4;
 import com.squareup.burst.annotation.Burst;
+import com.squareup.spoon.Spoon;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -43,6 +46,17 @@ public class ActivityRuleTest {
     @Test
     public void testLandingActivityExists() {
         assertNotNull("LandingActivity is null", echoActivityRule.get());
+    }
+
+    @Test
+    public void test_txtHelloVisible() {
+        View txtHello = echoActivityRule.get().findViewById(R.id.txtHello);
+        ViewAsserts.assertOnScreen(echoActivityRule.get().getWindow().getDecorView(), txtHello);
+    }
+
+    @Test
+    public void test_txtHelloVisibleWithEspresso() {
+        onView(withId(R.id.txtHello)).check(matches(isDisplayed()));
     }
 
 //    @Test
