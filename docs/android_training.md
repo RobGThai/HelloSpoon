@@ -239,13 +239,7 @@ open app/build/outputs/reports/androidTests/connected/index.html
 
 ---
 
-# Project setup
-- espresso-core:2.0
-- testing-support-lib:0.1
-- espresso-contrib:2.0
-- junit:4.11
-
----
+![](res/bg.png)
 
 # Create your 1st test case
 
@@ -264,6 +258,8 @@ extends ActivityInstrumentationTestCase2<MainActivity>{
 
 ---
 
+![](res/bg.png)
+
 # Create your 1st test method
 
 ```Java
@@ -280,12 +276,18 @@ Rerun the test
 
 ---
 
+# Looks boring?
+
+---
+
 # Introduction to Spoon [^1]
-![fit,right](res/ceiling_android.png)
+![fit,right](res/logo.png)
 
 [^1]: http://square.github.io/spoon/
 
 ---
+
+![](res/bg.png)
 
 # Spoon
 
@@ -294,6 +296,8 @@ Rerun the test
 Spoon run tests on all connected devices simultaneously as long as _**adb**_ can see it.
 
 ---
+
+![](res/bg.png)
 
 # Integrating Spoon
 
@@ -313,9 +317,20 @@ _**That's it.**_
 
 ---
 
-# <Run Spoon Manually>
+![](res/bg.png)
+
+# Running Spoon
+
+```
+java -jar spoon-runner-1.1.2-jar-with-dependencies.jar
+ --apk debug.apk
+ --test-apk test.apk
+ --sdk /usr/local/Cellar/android-sdk/23.0.2
+```
 
 ---
+
+![](res/bg.png)
 
 # Open spoon report
 
@@ -327,15 +342,19 @@ open app/build/spoon/debug/index.html
 
 ---
 
-# <Make it easier>
+![](res/bg.png)
+
+# Too hard? <br/> Let's find some help
 
 ---
+
+![](res/bg.png)
 
 # Integrate Spoon-gradle-plugin
 
 Add buildscript to the top of App's _**build.gradle**_ and apply plugin.
 
-```
+```Java
 buildscript {
   repositories {
     jcenter()
@@ -350,6 +369,9 @@ apply plugin: 'spoon'
 
 ---
 
+![](res/bg.png)
+
+
 # Using Spoon-gradle-plugin
 
 _**spoon-gradle-plugin**_ allow Gradle to start spoon instrumentation testing.
@@ -359,11 +381,15 @@ _**spoon-gradle-plugin**_ allow Gradle to start spoon instrumentation testing.
 ./gradlew spoon -PspoonClassName=fully.qualified.TestCase
 ```
 
+_**Just like that**_  
+
 ---
+
+![](res/bg.png)
 
 # Config spoon plugin
 
-```
+```Java
 spoon {
   // for debug output
   debug = true
@@ -383,6 +409,8 @@ spoon {
 ```
 
 ---
+
+![](res/bg.png)
 
 # Let's "see" the report
 
@@ -405,6 +433,8 @@ Run it using Spoon Runner
 
 ---
 
+![](res/bg.png)
+
 # Instrumentation Testing
 
 1. Design how actual user would interact with your application.
@@ -413,9 +443,11 @@ Run it using Spoon Runner
 
 ---
 
+![](res/bg.png)
+
 # Let's check if user see "Hello World!"
 
-Back to MainActivityTest
+Back to _**MainActivityTest**_
 
 ```Java
 public void testHelloWorldVisibleByDefault() {
@@ -437,11 +469,15 @@ public void testHelloWorldVisibleByDefault() {
 
 ---
 
-![fit](res/donotwantcat.jpg)
+![](res/bg.png)
+
+![inline| fit](res/donotwantcat.jpg)
 
 ---
 
-![fit](res/espresso_lockup.png)
+![](res/bg.png)
+
+![inline fit](res/espresso_lockup.png)
 
 ---
 
@@ -460,6 +496,8 @@ public void testHelloWorldVisibleByDefault() {
 
 ---
 
+![](res/bg.png)
+
 # Espresso.onView()
 
 Use to find view inside the current hierarchy. It is to be used in conjunction with _**ViewMatcher**_ or any _**org.hamcrest.Matcher**_ implementation.
@@ -475,17 +513,15 @@ onView(withText("Hello Steve!"))
 
 ---
 
+![](res/bg.png)
+
 # testHiEspressoIsDisplayed
 
 create a new test to check TextView with "_**Hi Espresso**_" is displayed.
 
 ---
 
-# testTextHelloIsDisplayed
-
-create a new test to check TextView with id _**R.id.txtHello**_ is displayed.
-
----
+![](res/bg.png)
 
 # testTextHelloIsDisplayed
 
@@ -493,7 +529,20 @@ create a new test to check TextView with id _**R.id.txtHello**_ is displayed.
 
 ---
 
-# Espresso Punchline
+![](res/bg.png)
+
+# testTextHelloIsDisplayed
+
+create a new test to check TextView with id _**R.id.txtHello**_ is displayed.
+
+---
+
+![fit](res/spoon_before.png)
+![fit](res/spoon_after.png)
+
+---
+
+# That's ~~voodoo~~ Espresso
 
 ---
 
@@ -779,5 +828,13 @@ public class IsNotANumber extends TypeSafeMatcher<Double> {
 
 }
 ```
+
+---
+
+# Project setup
+- espresso-core:2.0
+- testing-support-lib:0.1
+- espresso-contrib:2.0
+- junit:4.11
 
 ---
