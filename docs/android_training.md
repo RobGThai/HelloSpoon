@@ -449,7 +449,7 @@ Run it using Spoon Runner
 
 ![original](res/test_indicator.png)
 
-# What are the Test Cases? <<Add "Hello Login">>
+# What are the Test Cases?
 ![left|fit](res/login_still.png)
 
 ---
@@ -468,7 +468,8 @@ public void testHelloWorldVisibleByDefault() {
   for(int i = 0; i < total; i++) {
     View v = root.getChildAt(i);
     if(v instanceof TextView) {
-      assertEquals("TextView contain Hello World!", ((TextView) v).getText().toString(), "Hello World!");
+      assertEquals("TextView contain Login"
+      , ((TextView) v).getText().toString(), "Hello Login");
     }
   }
 }
@@ -517,30 +518,6 @@ onView(withText("Hello Steve!"))
 ```
 
 ## TBD
-
----
-
-![](res/bg.png)
-
-# testHiEspressoIsDisplayed
-
-create a new test to check TextView with "_**Hi Espresso**_" is displayed.
-
----
-
-![](res/bg.png)
-
-# testTextHelloIsDisplayed
-
-create a new test to check TextView with id _**R.id.txtHello**_ is displayed.
-
----
-
-![](res/bg.png)
-
-# testTextHelloIsDisplayed
-
-create a new test to check TextView with id _**R.id.txtHello**_ is displayed.
 
 ---
 
@@ -597,6 +574,8 @@ _**ViewAssertion**_ contains **matches()** method that adapt Matcher to use when
 
 # Let's try this
 
+## https://code.google.com/p/android-test-kit/wiki/EspressoV2CheatSheet
+
 ![right | fit](res/login_flow.gif)
 
 ---
@@ -625,7 +604,9 @@ _**ViewAssertion**_ contains **matches()** method that adapt Matcher to use when
 
 ---
 
-# <<ListView>>
+# What about ListView
+
+![right | fit](res/listview.png)
 
 ---
 
@@ -668,19 +649,29 @@ onView(allOf(withText("7"), hasSibling(withText("item: 0"))))
 
 ---
 
-# <<Hands On with onData Spinner>>
+![original](res/test_indicator.png)
+
+![left|fit](res/listview.png)
+
+# Hands On with onData Spinner
 
 ---
 
-# <<Hands On with onData Listview>>
+![original](res/test_indicator.png)
+
+![left|fit](res/listview.png)
+
+# Hands on with ListView
 
 ---
 
-# <<Hands On with onData (Maybe)>>
+![original](res/test_indicator.png)
 
----
+![left|fit](res/thread.png)
 
-# <<Hands On with registerIdlingResources>>
+# Hands On with Asynchronous task
+
+registerIdlingResources
 
 ---
 
@@ -695,41 +686,12 @@ onView(allOf(withText("7"), hasSibling(withText("item: 0"))))
 
 ---
 
-# public void testSayHello()
-
-```Java
-onView(withId(R.id.name_field))
-.perform(typeText("Steve"));
-
-onView(withId(R.id.greet_button))
-.perform(click());
-
-onView(withText("Hello Steve!"))
-.check(matches(isDisplayed()));
-```
-
----
-
-# public void testSayHello()
-
-_**onView**_(_**withId**_(R.id._**text**_))
-._**perform**_(_**typeText**_("Steve"));
-
-_**onView**_(_**withText**_("Hello Steve!"))
-._**check**_(_**matches**_(_**isDisplayed**_()));
-
----
-
 # What else can it do?
 
 - Open/Close NavigationDrawer
 - Option Menu
 - Contextual ActionBar
 - etc.
-
----
-
-# Extras
 
 ---
 
@@ -763,6 +725,8 @@ Test 4: VerifyApril
 Test 12: VerifyDecember
 
 ---
+
+![original](res/test_indicator.png)
 
 # Let's write that test
 
@@ -811,25 +775,27 @@ configurations.all {
 
 ---
 
+![](res/bg.png)
+
 # Challenge Time <br /> Let's automate <br /> Github app[^g]
 
 [^g]: https://github.com/github/android
 
 ---
 
-# AndroidTestCase
-
-Extras
+# Extras
 
 ---
 
-# Android UnitTest
+![](res/bg.png)
 
-Extras
+# AndroidTestCase & Android UnitTest
 
 ---
 
-# Hamcrest Matcher [^h] (Removed)
+![](res/bg.png)
+
+# Hamcrest Matcher [^h]
 
 Hamcrest is a framework for writing matcher objects allowing _**match rules**_ to be defined declaratively.
 
@@ -837,27 +803,42 @@ Hamcrest is a framework for writing matcher objects allowing _**match rules**_ t
 
 ---
 
-# Hamcrest Matcher Example: (Removed)
+# Q&A
 
-```Java
-public class IsNotANumber extends TypeSafeMatcher<Double> {
+# :beers: :wine_glass: :cocktail:
 
-  @Override
-  public boolean matchesSafely(Double number) {
-    return number.isNaN();
-  }
+---
 
-  public void describeTo(Description description) {
-    description.appendText("not a number");
-  }
+# Thank you
+![](res/me_full.png)
 
-  @Factory
-  public static <T> Matcher<Double> notANumber() {
-    return new IsNotANumber();
-  }
+Poohdish Rattanavijai
+thisisrobg@gmail.com
++RobGThai
 
-}
-```
+---
+
+![](res/bg.png)
+
+# testHiEspressoIsDisplayed
+
+create a new test to check TextView with "_**Hi Espresso**_" is displayed.
+
+---
+
+![](res/bg.png)
+
+# testTextHelloIsDisplayed
+
+create a new test to check TextView with id _**R.id.txtHello**_ is displayed.
+
+---
+
+![](res/bg.png)
+
+# testTextHelloIsDisplayed
+
+create a new test to check TextView with id _**R.id.txtHello**_ is displayed.
 
 ---
 
@@ -866,7 +847,3 @@ public class IsNotANumber extends TypeSafeMatcher<Double> {
 - testing-support-lib:0.1
 - espresso-contrib:2.0
 - junit:4.11
-
----
-
-<< Put it on Github >>
