@@ -68,6 +68,14 @@ One device?
 
 ---
 
+# What are there to test?
+
+![](res/bg.png)
+
+![inline](res/test_pyramid.png)
+
+---
+
 # A brief history of testing on Android
 
 ---
@@ -94,6 +102,8 @@ One device?
 ![](res/bg.png)
 
 # Robotium
+
+## <<Recheck this>>
 
 ![inline fill](res/tools/robotium.png)
 
@@ -218,12 +228,6 @@ or use Gradle shortcuts
 ```
 
 ![inline](res/test_build.png)
-
----
-
-![](res/bg.png)
-
-![inline](res/test_pyramid.png)
 
 ---
 
@@ -443,6 +447,13 @@ Run it using Spoon Runner
 
 ---
 
+![original](res/test_indicator.png)
+
+# What are the Test Cases? <<Add "Hello Login">>
+![left|fit](res/login_still.png)
+
+---
+
 ![](res/bg.png)
 
 # Let's check if user see "Hello World!"
@@ -462,10 +473,6 @@ public void testHelloWorldVisibleByDefault() {
   }
 }
 ```
-
----
-
-# <Add WTF Login screen test>
 
 ---
 
@@ -546,9 +553,13 @@ create a new test to check TextView with id _**R.id.txtHello**_ is displayed.
 
 ---
 
+![](res/bg.png)
+
 ![inline](res/anatomy.png)
 
 ---
+
+![](res/bg.png)
 
 # 1. Espresso's ViewMatcher save the day.
 
@@ -560,6 +571,8 @@ create a new test to check TextView with id _**R.id.txtHello**_ is displayed.
 
 ---
 
+![](res/bg.png)
+
 # 2. Perform action on view using ... _**perform()**_
 
 You can do all sort of stuff using _**ViewAction**_.
@@ -567,6 +580,8 @@ You can do all sort of stuff using _**ViewAction**_.
 Click, scroll, type, swipe, hardware button, etc.
 
 ---
+
+![](res/bg.png)
 
 # 3. Check view state using ... _**check()**_
 
@@ -580,7 +595,9 @@ _**ViewAssertion**_ contains **matches()** method that adapt Matcher to use when
 
 ---
 
-# <Show final login outcome>
+# Let's try this
+
+![right | fit](res/login_flow.gif)
 
 ---
 
@@ -588,23 +605,19 @@ _**ViewAssertion**_ contains **matches()** method that adapt Matcher to use when
 
 ---
 
-# Exploring Espresso (TDD style) checkpoint 1
+![original](res/test_indicator.png)
 
-1. TextView with id _**txtHello**_ is _**visible**_.
-1. TextView with id _**txtHello**_ is displaying "_**Hi Espresso**_".
-1. Button with text _**Start**_ is _**displayed**_.
-1. Click on Button with text _**Start**_ should start another Activity.
+# Wild CEO appeared!
 
----
-
-# Exploring Espresso (TDD style) checkpoint 2
-
-1. Click on Button with text _**Toast**_ should toast "_**Espresso rocks**_".
-2. After clicked button should become _**disabled**_.
+## The CEO use "Where is my logo?" <br /> It's super effective.
 
 ---
 
-# Lunch
+![](res/bg.png)
+
+![left | fit](res/celebration.jpg)
+
+# Congratulations you can now use Espresso!
 
 ---
 
@@ -612,7 +625,7 @@ _**ViewAssertion**_ contains **matches()** method that adapt Matcher to use when
 
 ---
 
-# <ListView>
+# <<ListView>>
 
 ---
 
@@ -626,14 +639,21 @@ _**ViewAssertion**_ contains **matches()** method that adapt Matcher to use when
 
 ---
 
+![](res/bg.png)
+
 # Espresso.onData()
 
 _**onData**_ is very similar to _**onView**_ but is used to interact with data inside AdapterView. You can specify root or adapter or the view at given position.
 
-• onChildView() • atPosition() • inRoot() • inAdapterView() • usingAdapterViewProtocol() • check() • perform()
-
+```Java
+• onChildView() • atPosition() • inRoot()
+• inAdapterView() • usingAdapterViewProtocol()
+• check() • perform()
+```
 
 ---
+
+![](res/bg.png)
 
 # Espresso.onData()
 
@@ -648,19 +668,19 @@ onView(allOf(withText("7"), hasSibling(withText("item: 0"))))
 
 ---
 
-# Hands On with onData
+# <<Hands On with onData Spinner>>
 
 ---
 
-# Hands On with onData
+# <<Hands On with onData Listview>>
 
 ---
 
-# Hands On with onData
+# <<Hands On with onData (Maybe)>>
 
 ---
 
-# Hands On with onData
+# <<Hands On with registerIdlingResources>>
 
 ---
 
@@ -718,6 +738,8 @@ _**onView**_(_**withText**_("Hello Steve!"))
 
 ---
 
+![](res/bg.png)
+
 # Burst
 Burst is a library for testing module that required varying data to test.
 
@@ -728,6 +750,8 @@ A month factory handle creation of month object from the given number of month.
 i.e. 1 -> January, 2 -> February, ... , 12 -> December
 
 ---
+
+![](res/bg.png)
 
 # Standard UnitTest method
 
@@ -743,6 +767,12 @@ Test 12: VerifyDecember
 # Let's write that test
 
 ---
+
+# You can use Burst in Instrumentation Test with ActivityRule
+
+---
+
+![](res/bg.png)
 
 # Integrating Burst
 
@@ -761,11 +791,13 @@ androidTestCompile ('com.squareup.burst:burst-junit4:1.0.2')
 
 ---
 
+![](res/bg.png)
+
 # Integrating Burst
 
 ## Force Hamcrest versioning
 
-```
+```Java
 configurations.all {
   exclude module : 'junit-dep'
 
@@ -776,6 +808,12 @@ configurations.all {
   }
 }
 ```
+
+---
+
+# Challenge Time <br /> Let's automate <br /> Github app[^g]
+
+[^g]: https://github.com/github/android
 
 ---
 
@@ -791,19 +829,11 @@ Extras
 
 ---
 
-# Android Test Kit [^*]
-
-< should remove this?>
-
----
-
-[^*]: git clone https://code.google.com/p/android-test-kit/
-
-# Hamcrest Matcher [^*] (Removed)
+# Hamcrest Matcher [^h] (Removed)
 
 Hamcrest is a framework for writing matcher objects allowing _**match rules**_ to be defined declaratively.
 
-[^*]: https://code.google.com/p/hamcrest/wiki/Tutorial
+[^h]: https://code.google.com/p/hamcrest/wiki/Tutorial
 
 ---
 
@@ -838,3 +868,5 @@ public class IsNotANumber extends TypeSafeMatcher<Double> {
 - junit:4.11
 
 ---
+
+<< Put it on Github >>
