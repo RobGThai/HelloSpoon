@@ -1,0 +1,18 @@
+{
+  "sdk": "/usr/local/Cellar/android-sdk/23.0.2",
+  "apk": "/Users/poohdish/gof/Code/HelloSpoon/app/build/outputs/apk/app-debug.apk",
+  "testApk": "/Users/poohdish/gof/Code/HelloSpoon/app/build/outputs/apk/app-debug-test-unaligned.apk",
+  "serial": "192.168.56.101:5555",
+  "debug": true,
+  "noAnimations": false,
+  "adbTimeout": 0,
+  "work": "/Users/poohdish/gof/Code/HelloSpoon/app/build/outputs/reports/spoon/debug/work/192_168_56_101_5555",
+  "junitReport": "/Users/poohdish/gof/Code/HelloSpoon/app/build/outputs/reports/spoon/debug/junit-reports/192_168_56_101_5555.xml",
+  "imageDir": "/Users/poohdish/gof/Code/HelloSpoon/app/build/outputs/reports/spoon/debug/image/192_168_56_101_5555",
+  "classpath": "/Users/poohdish/.gradle/caches/modules-2/files-2.1/com.squareup.spoon/spoon-runner/1.1.2/196228df5734f21218cd2eebceba883382657a68/spoon-runner-1.1.2.jar:/Users/poohdish/.gradle/caches/modules-2/files-2.1/com.squareup.spoon/spoon-client/1.1.2/1c7eadc93a00fb22eee7763d7daae0ab210c175e/spoon-client-1.1.2.jar:/Users/poohdish/.gradle/caches/modules-2/files-2.1/com.beust/jcommander/1.35/47592e181b0bdbbeb63029e08c5e74f6803c4edd/jcommander-1.35.jar:/Users/poohdish/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar:/Users/poohdish/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.1/6738a2da2202ce360f0af90aba005c1e05a2c4cd/commons-lang3-3.3.1.jar:/Users/poohdish/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/23.2.1/de438866febad0405faeea7f13376d29f739697c/ddmlib-23.2.1.jar:/Users/poohdish/.gradle/caches/modules-2/files-2.1/com.android.tools/common/23.2.1/3edc94e8b4a74aaa82c28573cdf4c074e00135ec/common-23.2.1.jar:/Users/poohdish/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar:/Users/poohdish/.gradle/caches/modules-2/files-2.1/net.sf.kxml/kxml2/2.3.0/ccbc77a5fd907ef863c29f3596c6f54ffa4e9442/kxml2-2.3.0.jar:/Users/poohdish/.gradle/caches/modules-2/files-2.1/com.github.spullara.mustache.java/compiler/0.8.14/fe44cff1ad36f7f50609574d2970503c355affd6/compiler-0.8.14.jar:/Users/poohdish/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/b1b6ea3b7e4aa4f492509a4952029cd8e48019ad/commons-io-2.4.jar:/Users/poohdish/.gradle/caches/modules-2/files-2.1/com.madgag/animated-gif-lib/1.2/3194611bf0d4320b048aee70f0862230fd6f0982/animated-gif-lib-1.2.jar:/Users/poohdish/.gradle/caches/modules-2/files-2.1/org.lesscss/lesscss/1.3.3/68466582fd2ebd7e81b37eefef958b07689a6102/lesscss-1.3.3.jar:/Users/poohdish/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.1/5043bfebc3db072ed80fbd362e7caf00e885d8ae/commons-logging-1.1.1.jar:/Users/poohdish/.gradle/caches/modules-2/files-2.1/org.mozilla/rhino/1.7R4/e982f2136574b9a423186fbaeaaa98dc3e5a5288/rhino-1.7R4.jar",
+  "instrumentationInfo": {
+    "applicationPackage": "com.robgthai.spoon.hellospoon",
+    "instrumentationPackage": "com.robgthai.spoon.hellospoon.test",
+    "testRunnerClass": "android.support.test.runner.AndroidJUnitRunner"
+  }
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>With Custom Failure Handler</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" rel="stylesheet">
+        <link href="../../../static/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../static/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="../../../static/spoon.css" rel="stylesheet">
+        <script src="../../../static/jquery.min.js"></script>
+        <script src="../../../static/bootstrap.min.js"></script>
+        <meta name="description" content="Test passed in 2 seconds on Genymotion Google Nexus 5 - 4.4.4 - API 19 - 1080x1920">
+    </head>
+    <body>
+        <div class="container">
+            <div class="hero-unit">
+                <h1>With Custom Failure Handler</h1>
+                <p>Test passed in 2 seconds on Genymotion Google Nexus 5 - 4.4.4 - API 19 - 1080x1920</p>
+            </div>
+            <div class="row log">
+                <div class="span12">
+                    <table class="table table-striped table-hover table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Level</th>
+                                <th>Tag</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="level-info info">
+                                <td>02-13 16:57:33.832</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>started: testWithCustomFailureHandler(com.robgthai.spoon.hellospoon.google.CustomFailureHandlerTest)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>02-13 16:57:33.836</td>
+                                <td>info</td>
+                                <td>MonitoringInstrumentation</td>
+                                <td>Activities that are still in CREATED to PAUSED: 1</td>
+                            </tr>
+                            <tr class="level-warn warning">
+                                <td>02-13 16:57:33.908</td>
+                                <td>warn</td>
+                                <td>IInputConnectionWrapper</td>
+                                <td>showStatusIcon on inactive InputConnection</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>02-13 16:57:33.912</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: com.robgthai.spoon.hellospoon.google.MainActivity@528bcaec in: PRE_ON_CREATE</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>02-13 16:57:33.928</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 39K, 60% free 4909K/12256K, paused 8ms, total 8ms</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>02-13 16:57:33.932</td>
+                                <td>info</td>
+                                <td>dalvikvm-heap</td>
+                                <td>Grow heap (frag case) to 7.272MB for 2536932-byte allocation</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>02-13 16:57:34.064</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 1K, 40% free 7385K/12256K, paused 3ms, total 44ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>02-13 16:57:34.072</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: com.robgthai.spoon.hellospoon.google.MainActivity@528bcaec in: CREATED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>02-13 16:57:34.072</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: com.robgthai.spoon.hellospoon.google.MainActivity@528bcaec in: STARTED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>02-13 16:57:34.072</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: com.robgthai.spoon.hellospoon.google.MainActivity@528bcaec in: RESUMED</td>
+                            </tr>
+                            <tr class="level-warn warning">
+                                <td>02-13 16:57:34.876</td>
+                                <td>warn</td>
+                                <td>EGL_genymotion</td>
+                                <td>eglSurfaceAttrib not implemented</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>02-13 16:57:34.880</td>
+                                <td>info</td>
+                                <td>Choreographer</td>
+                                <td>Skipped 46 frames!  The application may be doing too much work on its main thread.</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>02-13 16:57:35.584</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: com.robgthai.spoon.hellospoon.google.SimpleActivity@528f1674 in: STOPPED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>02-13 16:57:35.584</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: com.robgthai.spoon.hellospoon.google.SimpleActivity@528f1674 in: DESTROYED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>02-13 16:57:35.596</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 32K, 40% free 7429K/12256K, paused 4ms, total 4ms</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>02-13 16:57:35.604</td>
+                                <td>info</td>
+                                <td>dalvikvm-heap</td>
+                                <td>Grow heap (frag case) to 14.631MB for 7672332-byte allocation</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>02-13 16:57:35.604</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 337K, 27% free 14583K/19752K, paused 2ms, total 2ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>02-13 16:57:35.836</td>
+                                <td>debug</td>
+                                <td>Spoon</td>
+                                <td>Captured screenshot &#39;Default&#39;.</td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>Special exception is special and expected: </td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>com.robgthai.spoon.hellospoon.google.CustomFailureHandlerTest$MySpecialException: android.support.test.espresso.NoMatchingViewException: No views in hierarchy found matching: with text: is &quot;does not exist&quot;</td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>If the target view is not part of the view hierarchy, you may need to use Espresso.onData to load it from one of the following AdapterViews:android.widget.ListView{5293ea10 VFED.VC. .F...... 0,0-1080,1701 #102000a android:id/list}</td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>View Hierarchy:</td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>+&gt;DecorView{id=-1, visibility=VISIBLE, width=1080, height=1776, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} </td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>|</td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>+-&gt;LinearLayout{id=-1, visibility=VISIBLE, width=1080, height=1776, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} </td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>|</td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>+--&gt;ViewStub{id=16909070, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} </td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>|</td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>+--&gt;FrameLayout{id=16908290, res-name=content, visibility=VISIBLE, width=1080, height=1701, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=75.0, child-count=1} </td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>|</td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>+---&gt;ListView{id=16908298, res-name=list, visibility=VISIBLE, width=1080, height=1701, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=true, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=true, editor-info=[inputType=0xb1 imeOptions=0x6 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=null fieldId=0 fieldName=null extras=null ], x=0.0, y=0.0, child-count=12} </td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>|</td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>+----&gt;TextView{id=16908308, res-name=text1, visibility=VISIBLE, width=1080, height=144, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=true, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=ActionBarTestActivity, input-type=0, ime-target=false, has-links=false} </td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>|</td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>+----&gt;TextView{id=16908308, res-name=text1, visibility=VISIBLE, width=1080, height=144, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=146.0, text=DisplayActivity, input-type=0, ime-target=false, has-links=false} </td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>|</td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>+----&gt;TextView{id=16908308, res-name=text1, visibility=VISIBLE, width=1080, height=144, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=292.0, text=DrawerActivity, input-type=0, ime-target=false, has-links=false} </td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>|</td>
+                            </tr>
+                            <tr class="level-error error">
+                                <td>02-13 16:57:35.840</td>
+                                <td>error</td>
+                                <td>CustomFailureHandlerTest</td>
+                                <td>+----&gt;TextView{id=16908308, res-name=text1, visibility=VISIBLE, width=1080, height=144, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=4</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>02-13 16:57:35.964</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_EXPLICIT freed 7998K, 43% free 7095K/12256K, paused 0ms+0ms, total 5ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>02-13 16:57:35.972</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_EXPLICIT freed 3K, 43% free 7092K/12256K, paused 0ms+1ms, total 5ms</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>02-13 16:57:35.972</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>finished: testWithCustomFailureHandler(com.robgthai.spoon.hellospoon.google.CustomFailureHandlerTest)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
