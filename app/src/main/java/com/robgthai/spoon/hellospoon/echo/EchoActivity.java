@@ -25,10 +25,13 @@ public class EchoActivity extends ActionBarActivity {
         setContentView(R.layout.activity_echo);
 
         Bundle b = getIntent().getExtras();
+        String message = null;
 
-        String message = b.getString(MESSAGE);
-        TextView t = (TextView) findViewById(R.id.txtEcho);
-        t.setText(message);
+        if(b != null) {
+            message = b.getString(MESSAGE);
+            TextView t = (TextView) findViewById(R.id.txtEcho);
+            t.setText(message);
+        }
 
         ImageView img = (ImageView) findViewById(R.id.imgPhoto);
 
